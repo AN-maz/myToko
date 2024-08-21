@@ -1,0 +1,573 @@
+:root{
+    --main: #7cb9ff;
+    --bg: #52a1b4;
+    --hover: #00ffff;
+}
+*{
+font-family: "poppins", sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+outline: none;
+border: none;
+text-decoration: none;
+
+scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: var(--bg);
+    color: #Fff;
+    min-height: 3200px;
+} 
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(37, 130, 173, 0.8);
+    border-bottom: 1px solid var(--main);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+
+   
+}
+
+.navbar .navbar-logo span{
+    color: var(--main);
+}
+
+.navbar .navbar-nav a{
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 1rem;
+
+ 
+}
+.navbar .navbar-nav a:hover{
+    color: var(--hover);
+
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+.navbar .navbar-nav a::after{
+     content: '';
+     display: block;
+     padding-bottom: 0.5rem;
+     border-bottom: 0.1rem solid var(--hover);
+     transform: scale(0);
+     transform: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(1); /* garis biru dibawah */
+    transition: 0.2s ease;
+}
+.navbar .navbar-extra a{
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.navbar .navbar-extra a:hover{
+    color: var(--hover);
+}
+
+#hamburger-menu{
+    display: none;
+}
+
+/* Hero section */
+.hero {
+    min-height: 100vh; /* Mengubah dari min-width ke min-height */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Menambahkan untuk memusatkan konten secara horizontal */
+    background-image: url('bg/bg1.jpg'); /* Pastikan path gambar benar */
+    background-repeat: no-repeat;
+    background-size: cover; /* Menyesuaikan ukuran gambar dengan layar */
+    background-position: center; /* Memusatkan gambar */
+    color: #fff; /* Menambahkan warna teks */
+    text-align: center; /* Menambahkan perataan teks */
+    padding: 2rem; /* Menambahkan padding */
+
+  
+}
+
+.hero .content h1 {
+    font-size: 3rem; /* Mengubah ukuran font */
+    margin-bottom: 1rem; /* Menambahkan margin bawah */
+}
+
+.hero .content p {
+    font-size: 1.5rem; /* Mengubah ukuran font */
+    margin-bottom: 2rem; /* Menambahkan margin bawah */
+}
+
+.hero .content .cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--main); /* Menggunakan variabel warna */
+    color: #fff;
+    border-radius: 5px; /* Menambahkan border radius */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf besar */
+    transition: background-color 0.3s; /* Menambahkan transisi */
+}
+
+.hero .content .cta:hover {
+    background-color: var(--hover); /* Mengubah warna saat hover */
+}
+
+/* About section */
+.about {
+    padding: 10rem 0; /* Menambahkan padding atas dan bawah */
+    background-color: #f9f9f9; /* Mengubah warna latar belakang */
+    text-align: center; /* Menambahkan perataan teks */
+
+    min-height: 100vh;
+}
+
+.about h2 {
+    font-size: 2.5rem; /* Mengubah ukuran font */
+    color: var(--main); /* Menggunakan variabel warna */
+    margin-bottom: 2rem; /* Menambahkan margin bawah */
+}
+
+.about h2 span {
+    color: var(--hover); /* Mengubah warna teks */
+}
+
+.about .row {
+  
+    display: flex;
+    flex-wrap: wrap; /* Menambahkan flex-wrap untuk responsivitas */
+    justify-content: center; /* Memusatkan konten */
+    align-items: center; /* Menyelaraskan konten secara vertikal */
+
+    padding: 40px;
+    
+ 
+}
+
+.about .about-img {
+    flex: 1 1 40%; /* Mengatur ukuran gambar */
+    padding: 0.5rem; /* Menambahkan padding */
+
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1); /* Menambahkan bayangan */
+   
+
+}
+
+.about .about-img img {
+    width: 100%; /* Mengatur lebar gambar */
+    border-radius: 10px; /* Menambahkan border radius */
+
+  
+}
+
+.about .content {
+    flex: 1 1 50%; /* Mengatur ukuran konten */
+    padding: 1rem; /* Menambahkan padding */
+
+}
+
+.about .content h3 {
+    font-size: 2rem; /* Mengubah ukuran font */
+    color: var(--main); /* Menggunakan variabel warna */
+    margin-bottom: 1rem; /* Menambahkan margin bawah */
+}
+
+.about .content p {
+    font-size: 1.2rem; /* Mengubah ukuran font */
+    color: #333; /* Mengubah warna teks */
+    line-height: 1.6; /* Menambahkan tinggi baris */
+}
+
+/* Menu section */
+.menu {
+    padding: 4rem 0; /* Menambahkan padding atas dan bawah */
+    background-color: #e1f0fa; /* Mengubah warna latar belakang */
+    text-align: center; /* Menambahkan perataan teks */
+
+}
+
+.menu h2 {
+    font-size: 2.5rem; /* Mengubah ukuran font */
+    color: var(--main); /* Menggunakan variabel warna */
+    margin-bottom: 2rem; /* Menambahkan margin bawah */
+}
+
+.menu h2 span {
+    color: var(--hover); /* Mengubah warna teks */
+}
+
+.menu p {
+    font-size: 1.2rem; /* Mengubah ukuran font */
+    color: #666; /* Mengubah warna teks */
+    margin-bottom: 3rem; /* Menambahkan margin bawah */
+}
+
+.menu .row {
+    display: flex;
+    flex-wrap: wrap; /* Menambahkan flex-wrap untuk responsivitas */
+    justify-content: center; /* Memusatkan konten */
+    gap: 2rem; /* Menambahkan jarak antar elemen */
+}
+
+.menu .menu-card {
+    flex: 1 1 30%; /* Mengatur ukuran kartu menu */
+    background-color: #f9f9f9; /* Mengubah warna latar belakang kartu */
+    border-radius: 10px; /* Menambahkan border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+    padding: 1rem; /* Menambahkan padding */
+    text-align: center; /* Menambahkan perataan teks */
+    transition: transform 0.3s; /* Menambahkan transisi */
+}
+
+.menu .menu-card:hover {
+    transform: translateY(-10px); /* Menambahkan efek hover */
+}
+
+.menu .menu-card-img {
+    width: 100%; /* Mengatur lebar gambar */
+    border-radius: 10px; /* Menambahkan border radius */
+    margin-bottom: 1rem; /* Menambahkan margin bawah */
+}
+
+.menu .menu-card-title {
+    font-size: 1.5rem; /* Mengubah ukuran font */
+    color: var(--main); /* Menggunakan variabel warna */
+    margin-bottom: 0.5rem; /* Menambahkan margin bawah */
+}
+
+.menu .menu-card-price {
+    font-size: 1.2rem; /* Mengubah ukuran font */
+    color: #333; /* Mengubah warna teks */
+}
+
+/* Contact section */
+.contact {
+    padding: 4rem 0; /* Menambahkan padding atas dan bawah */
+    background-color: #f1f1f1; /* Mengubah warna latar belakang */
+    text-align: center; /* Menambahkan perataan teks */
+
+    min-height: 80vh;
+
+}
+
+.contact h2 {
+    font-size: 2.5rem; /* Mengubah ukuran font */
+    color: var(--main); /* Menggunakan variabel warna */
+    margin-bottom: 2rem; /* Menambahkan margin bawah */
+}
+
+.contact h2 span {
+    color: var(--hover); /* Mengubah warna teks */
+}
+
+.contact p {
+    font-size: 1.2rem; /* Mengubah ukuran font */
+    color: #666; /* Mengubah warna teks */
+    margin-bottom: 3rem; /* Menambahkan margin bawah */
+}
+
+.contact .row {
+    display: flex;
+    justify-content: center; /* Memusatkan konten */
+    gap: 2rem; /* Menambahkan jarak antar elemen */
+}
+
+.contact .map {
+    flex: 1 1 100%; /* Mengatur ukuran peta */
+    border: 0; /* Menghapus border */
+    height: 300px; /* Mengatur tinggi peta */
+    margin-bottom: 2rem; /* Menambahkan margin bawah */
+}
+
+
+.contact form {
+    flex: 1 1 100%; /* Mengatur ukuran form */
+    display: flex;
+    flex-direction: column; /* Mengatur arah flex menjadi kolom */
+    gap: 1rem; /* Menambahkan jarak antar elemen */
+}
+
+.contact .input-group {
+    display: flex;
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    background-color: #fff; /* Mengubah warna latar belakang */
+    border-radius: 5px; /* Menambahkan border radius */
+    padding: 0.5rem; /* Menambahkan padding */
+    box-shadow: 0 4px 8px rgba(235, 225, 225, 0.1); /* Menambahkan bayangan */
+}
+
+.contact .input-group i {
+    margin-right: 0.5rem; /* Menambahkan margin kanan */
+    color: var(--main); /* Menggunakan variabel warna */
+}
+
+.contact .input-group input {
+    flex: 1; /* Mengatur ukuran input */
+    border: none; /* Menghapus border */
+    outline: none; /* Menghapus outline */
+    padding: 0.5rem; /* Menambahkan padding */
+    font-size: 1rem; /* Mengubah ukuran font */
+}
+
+.contact .btn {
+    padding: 1rem 2rem; /* Menambahkan padding */
+    background-color: var(--main); /* Menggunakan variabel warna */
+    color: #fff; /* Mengubah warna teks */
+    border: none; /* Menghapus border */
+    border-radius: 5px; /* Menambahkan border radius */
+    cursor: pointer; /* Mengubah kursor */
+    transition: background-color 0.3s; /* Menambahkan transisi */
+}
+.contact .btn:hover {
+    background-color: var(--hover); /* Mengubah warna saat hover */
+}
+
+/* Footer section */
+footer {
+    padding: 2rem 0; /* Menambahkan padding atas dan bawah */
+    background-color: #333; /* Mengubah warna latar belakang */
+    color: #fff; /* Mengubah warna teks */
+    text-align: center; /* Menambahkan perataan teks */
+}
+
+footer .sosial {
+    margin-bottom: 1rem; /* Menambahkan margin bawah */
+}
+
+footer .sosial a {
+    display: inline-block; /* Menampilkan sebagai blok sebaris */
+    margin: 0 0.5rem; /* Menambahkan margin kiri dan kanan */
+    color: #fff; /* Mengubah warna teks */
+    font-size: 1.5rem; /* Mengubah ukuran font */
+    transition: color 0.3s; /* Menambahkan transisi */
+}
+
+footer .sosial a:hover {
+    color: var(--hover); /* Mengubah warna saat hover */
+}
+
+footer .links {
+    margin-bottom: 1rem; /* Menambahkan margin bawah */
+}
+
+footer .links a {
+    display: inline-block; /* Menampilkan sebagai blok sebaris */
+    margin: 0 0.5rem; /* Menambahkan margin kiri dan kanan */
+    color: #fff; /* Mengubah warna teks */
+    font-size: 1rem; /* Mengubah ukuran font */
+    transition: color 0.3s; /* Menambahkan transisi */
+}
+
+footer .links a:hover {
+    color: var(--hover); /* Mengubah warna saat hover */
+}
+
+footer .credit {
+    font-size: 0.9rem; /* Mengubah ukuran font */
+    color: #bbb; /* Mengubah warna teks */
+}
+
+footer .credit a {
+    color: var(--main); /* Menggunakan variabel warna */
+    text-decoration: none; /* Menghapus garis bawah */
+}
+
+footer .credit a:hover {
+    color: var(--hover); /* Mengubah warna saat hover */
+}
+
+
+
+/* media Queries */
+
+/* Laptop */
+@media(max-width:1366px){
+    html{
+        font-size: 75%;
+    }
+}
+/* tablet */
+@media(max-width:768px){
+    html{
+        font-size: 62.5%;
+    }
+    
+    .navbar-nav {
+       position: absolute;
+       top: 100%;
+       right: -100%;
+       background-color: rgb(255, 255, 255);
+       border-radius: 5px;
+       width: 30rem;
+       height: 30vh;
+       transition: 0.3s;
+    }
+    .navbar-nav.active {
+        right: 0;
+       
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav a{
+        color: var(--main);
+        display: block;
+        padding: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    } 
+
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover::after{
+        transform: scalex(0.2);
+    }
+
+    /* section about */
+    .about .row {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom */
+    }
+
+    .about .about-img, .about .content {
+        flex: 1 1 100%; /* Mengatur ukuran elemen menjadi 100% */
+        padding: 1rem; /* Menambahkan padding */
+
+        
+    }
+
+    .about .about-img img {
+        width: 100%; /* Mengatur lebar gambar menjadi 80% */
+        margin: 0 auto; /* Memusatkan gambar */
+    }
+
+    .about .content{
+        padding: 5rem;
+    }
+
+    /* Menu */
+    .menu .menu-card {
+        flex: 1 1 45%; /* Mengatur ukuran kartu menu */
+        margin: 5rem;
+    
+    }
+
+    /* contact */
+    .contact .row {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom */
+    }
+
+    .contact .map {
+        height: 200px; /* Mengatur tinggi peta */
+    }
+
+    /* footer  */
+    footer .sosial a, footer .links a {
+        font-size: 1.2rem; /* Mengubah ukuran font */
+    }
+}
+/* hp */
+@media(max-width:450px){
+    html{
+        font-size: 55%;
+    }
+
+    /* Section about */
+    .about h2 {
+        font-size: 2rem; /* Mengubah ukuran font */
+    }
+
+    .about .content h3 {
+        font-size: 1.5rem; /* Mengubah ukuran font */
+    }
+
+    .about .content p {
+        font-size: 1rem; /* Mengubah ukuran font */
+    }
+
+    .about .about-img img {
+        width: 100%; /* Mengatur lebar gambar menjadi 100% */
+    }
+
+    /* Menu */
+
+    .menu h2 {
+        font-size: 2rem; /* Mengubah ukuran font */
+    }
+
+    .menu p {
+        font-size: 1rem; /* Mengubah ukuran font */
+    }
+
+    .menu .menu-card {
+        flex: 1 1 100%; /* Mengatur ukuran kartu menu */
+    }
+
+    .menu .menu-card-title {
+        font-size: 1.2rem; /* Mengubah ukuran font */
+    }
+
+    .menu .menu-card-price {
+        font-size: 1rem; /* Mengubah ukuran font */
+    }
+
+   
+    /* contact */
+
+    .contact h2 {
+        font-size: 2rem; /* Mengubah ukuran font */
+    }
+
+    .contact p {
+        font-size: 1rem; /* Mengubah ukuran font */
+    }
+
+    .contact .input-group input {
+        font-size: 0.9rem; /* Mengubah ukuran font */
+    }
+
+    .contact .btn {
+        padding: 0.8rem 1.5rem; /* Mengubah padding */
+        font-size: 0.9rem; /* Mengubah ukuran font */
+    }
+
+    /* footer */
+    footer .sosial a, footer .links a {
+        font-size: 1rem; /* Mengubah ukuran font */
+    }
+
+    footer .credit {
+        font-size: 0.8rem; /* Mengubah ukuran font */
+    }
+}
+
+/* Contoh CSS untuk elemen yang akan ditampilkan atau disembunyikan */
+.search-bar{
+    display: none; /* Sembunyikan elemen secara default */
+}
+
+.search-bar.active{
+    display: block; /* Tampilkan elemen saat memiliki kelas 'active' */
+
+}
